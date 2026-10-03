@@ -12,8 +12,13 @@ Esta pasta reúne os projetos da primeira parte da disciplina, sobre **resoluç�
 ## Requisitos
 
 ```bash
-pip install pygame
-# ou
+pip install pygame-ce
+```
+
+O `pygame-ce` (Community Edition) substitui o `pygame` sem precisar mudar nada no código, porque o import continua sendo `import pygame`. Ele é o recomendado para estes projetos: o `pygame` 2.6.1 no Windows pode falhar dentro de `pygame.event.get()` com `SystemError: <built-in function get> returned a result with an exception set` (precedido de `KeyError: 0`). Se você já tem o `pygame` instalado, troque assim:
+
+```bash
+pip uninstall pygame
 pip install pygame-ce
 ```
 
@@ -128,10 +133,10 @@ Problema de **Satisfação de Restrições**: colorir os **27 estados brasileiro
 
 **Como rodar**
 ```bash
-cd Busca
-python CSP/main.py
+cd Busca/CSP
+python main.py
 ```
-> **Atenção:** a imagem é carregada com o caminho relativo `"CSP\mapa.png"`, então o script deve ser executado **a partir da pasta `Busca/`**. Esse caminho com `\` funciona no Windows. No Linux/macOS, troque para `os.path.join("CSP", "mapa.png")` em `pygame_visualizer.py`.
+O arquivo a ser executado é o `main.py`. O `pygame_visualizer.py` só define as funções de desenho e não abre a janela sozinho. O `mapa.png` é encontrado a partir da pasta do próprio script, então o projeto roda de qualquer pasta e em qualquer sistema operacional.
 
 Na janela, clique em **"Rodar com Heurísticas"** ou **"Rodar sem Heurísticas"** para comparar o número de **chamadas recursivas** e de **backtracks**. Sem heurísticas, esses números variam muito entre as execuções.
 

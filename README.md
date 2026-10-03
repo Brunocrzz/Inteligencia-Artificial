@@ -70,9 +70,9 @@ pip install -r requirements.txt   # quando houver
 python main.py
 ```
 
-Os projetos de **Busca** usam apenas o Pygame (`pip install pygame` ou `pip install pygame-ce`). As instruções específicas de cada projeto estão no README da pasta correspondente.
+Os projetos de **Busca** usam apenas o Pygame. Recomenda-se a versão `pygame-ce` (`pip install pygame-ce`). As instruções específicas de cada projeto estão no README da pasta correspondente.
 
-> Os projetos foram desenvolvidos e testados no **Windows**. Alguns caminhos de arquivo usam `\`, o que está indicado nos READMEs específicos.
+> Os projetos foram desenvolvidos e testados no **Windows**. Em outros sistemas operacionais, alguns exemplos de aula podem precisar de ajuste nos caminhos de arquivo.
 
 ## Relatórios
 

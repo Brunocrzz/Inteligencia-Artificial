@@ -1,9 +1,13 @@
+import os
 import pygame
 from brasilGraph import STATE_POSITIONS, COLORS, BRAZIL_STATES
 from floodfill import generate_state_pixels
 
 WIDTH = 1200
 HEIGHT = 800
+
+# Caminho do mapa relativo a este arquivo, funciona de qualquer pasta e em qualquer sistema
+MAP_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)), "mapa.png")
 
 WHITE = (255, 255, 255)
 BLACK = (0, 0, 0)
@@ -24,7 +28,7 @@ def initialize():
 
     font = pygame.font.SysFont(None, 28)
 
-    map_image = pygame.image.load("CSP\mapa.png")
+    map_image = pygame.image.load(MAP_PATH)
     map_image = pygame.transform.scale(map_image, (WIDTH, HEIGHT))
 
     state_pixels = generate_state_pixels(
